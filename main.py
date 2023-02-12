@@ -76,7 +76,7 @@ def data_pars(links):
 
         # for csv rows.
         columns = set(i for d in box_info for i in d)
-        # create rows with goods data
+        # create rows from goods data
         with open('out.csv', 'w', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=columns)
             writer.writeheader()  # Пишем заголовок
