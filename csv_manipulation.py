@@ -20,7 +20,6 @@ def csv_work():
     # change_data = df.na.fill('No info') # change None -> No info
     # expensive_goods = df.filter('Price >= 500').select(['Model', 'Price']) # Show only expensive sneaker's... (500 and more)
     # all_price = df.agg({'Price': 'sum'}) # summary of all goods.
-    df = df.write.parquet('/home/unotuno/python/pythonProject/lamoda_parsing/done')
     return df
 
 if __name__ == "__main__":
