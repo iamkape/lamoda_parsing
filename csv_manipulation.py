@@ -1,5 +1,6 @@
-
+from IPython.lib.pretty import pprint
 from pyspark.sql import SparkSession
+import pyspark.pandas as ps
 
 
 def csv_work():
@@ -11,6 +12,7 @@ def csv_work():
                                                                         "cast(Price as float) Price",
                                                                         "cast(Link as string) Link ")
 
+
     # Some variables.
     # df_col = df.select(['Model', 'Price']) # Show only Model & Price column.
     # double_price = df.withColumn('Double Price', df['Price']*2) # Price multiplication
@@ -20,6 +22,7 @@ def csv_work():
     # change_data = df.na.fill('No info') # change None -> No info
     # expensive_goods = df.filter('Price >= 500').select(['Model', 'Price']) # Show only expensive sneaker's... (500 and more)
     # all_price = df.agg({'Price': 'sum'}) # summary of all goods.
+
     return df
 
 if __name__ == "__main__":
